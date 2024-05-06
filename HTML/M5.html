@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Resources - Asset Management Services</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #444;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.about-section {
+  margin-bottom: 50px;
+}
+
+.about-section h2 {
+  color: #333;
+}
+
+.about-section p {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <script>// Example JavaScript code (can be expanded for more functionality)
+       // scripts.js
+
+$(document).ready(function() {
+  // Event listener for file upload input
+  $('.resource-item input[type="file"]').change(function() {
+    // Get the selected file
+    var file = $(this).prop('files')[0];
+    
+    // Get the resource name
+    var resourceName = $(this).closest('.resource-item').find('h3').text();
+    
+    // Validate file type (example: allow only PDF files)
+    if (file && file.type === 'application/pdf') {
+      // Display a message indicating that the file is being uploaded
+      alert('Uploading file for ' + resourceName + ': ' + file.name);
+      
+      // Simulate file upload process (replace with actual upload functionality)
+      setTimeout(function() {
+        alert('File uploaded successfully for ' + resourceName + '!');
+        // You can save the file to your server or perform additional processing here
+      }, 2000); // Simulating a delay of 2 seconds
+    } else {
+      // Display an error message if the file type is not supported
+      alert('Error: Unsupported file type for ' + resourceName + '. Please select a PDF file.');
+      // Clear the file input
+      $(this).val('');
+    }
+  });
+});
+
+        </script>
+        <header>
+          <div class="container">
+            <h1>Asset Management Services</h1>
+            <nav>
+              <a href="M1.html">Home</a>
+              <a href="M2.html">About Us</a>
+              <a href="M3.html">Services</a>
+              <a href="M4.html">Investment Insights</a>
+              <a href="M5.html">Client Resources</a>
+              <a href="M6.html">Contact Us</a>
+            </nav>
+          </div>  </header>
+  <header>
+  <div class="container">
+    <section class="resources-section">
+      <h2>Client Resources</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="resource-item">
+            <h3>Account Login</h3>
+            <p>Access your investment accounts securely using our online portal. Login to view account balances, transaction history, and portfolio performance.</p>
+            <a href="#" class="btn btn-primary">Login</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="resource-item">
+            <h3>Forms and Documents</h3>
+            <p>Download important forms and documents related to account opening, account maintenance, and investment disclosures. Find all the necessary paperwork in one convenient location.</p>
+            <a href="#" class="btn btn-primary">Download</a>
+            <!-- File upload input for clients to upload documents -->
+            <input type="file" id="document-upload" name="document-upload" class="form-control-file mt-3">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="resource-item">
+            <h3>Contact Support</h3>
+            <p>Need assistance? Contact our dedicated support team for help with account-related inquiries, technical issues, or general questions. We're here to assist you.</p>
+            <a href="M6.html" class="btn btn-primary">Contact Support</a>
+          </div>
+        </div>
+        <!-- Add more resource items as needed -->
+        <div class="col-md-4">
+          <div class="resource-item">
+            <h3>Market Reports</h3>
+            <p>Access our latest market reports and research publications to stay informed about market trends, economic indicators, and investment opportunities.</p>
+            <a href="#" class="btn btn-primary">View Reports</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="resource-item">
+            <h3>Webinars</h3>
+            <p>Attend live webinars and online seminars hosted by our experts to learn about investment strategies, financial planning, and market updates.</p>
+            <a href="#" class="btn btn-primary">View Webinars</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="resource-item">
+            <h3>Investment Tools</h3>
+            <p>Explore our collection of investment tools and calculators to analyze your investment portfolio, estimate returns, and plan for retirement.</p>
+            <a href="#" class="btn btn-primary">Access Tools</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
